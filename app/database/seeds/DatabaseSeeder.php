@@ -9,12 +9,12 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
-        Eloquent::unguard();
+		Eloquent::unguard();
 
-        User::create([
-            'username' => 'admin',
-            'password' => Hash::make('admin'),
-        ]);
+		User::create([
+			'username' => 'admin',
+			'password' => Hash::make('admin'),
+		]);
 
 		// $this->call('UserTableSeeder');
 	}

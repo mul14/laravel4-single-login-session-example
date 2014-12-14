@@ -30,5 +30,5 @@ Route::post('/login', function()
 Route::get('/logout', function()
 {
     Auth::logout();
-	return Redirect::to('/');
+    return Redirect::to('/');
 });

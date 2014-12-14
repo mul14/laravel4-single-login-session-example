@@ -45,13 +45,13 @@ Route::filter('auth', function()
 		{
 			return Redirect::guest('login');
 		}
-    }
+	}
 
-    if (Auth::user()->session_id != Session::getId())
-    {
-        Auth::logout();
-        return Redirect::guest('/login');
-    }
+	if (Auth::user()->session_id != Session::getId())
+	{
+		Auth::logout();
+		return Redirect::guest('/login');
+	}
 });
 
 
