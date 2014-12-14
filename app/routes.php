@@ -17,6 +17,7 @@ Route::post('/login', function()
 
     if (Auth::attempt($credentials))
     {
+        // Simpan Session ID
         $user = Auth::user();
         $user->session_id = Auth::getSession()->getId();
         $user->save();

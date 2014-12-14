@@ -16,8 +16,8 @@ class CreateUsersTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('username');
-			$table->string('password');
-			$table->string('session_id');
+			$table->char('password', 60);
+			$table->char('session_id', 40);
 			$table->rememberToken();
 			$table->timestamps();
 		});

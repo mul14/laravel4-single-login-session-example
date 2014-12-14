@@ -47,6 +47,7 @@ Route::filter('auth', function()
 		}
 	}
 
+	// Yang lain harus logout kalau session tidak sama
 	if (Auth::user()->session_id != Session::getId())
 	{
 		Auth::logout();
